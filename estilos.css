@@ -1,0 +1,198 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #cddce0;
+  padding: 20px;
+  position: relative;
+  color: #ffffff;
+  margin: 0;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: grayscale(100%) brightness(0.6);
+  z-index: -1;
+}
+
+.encabezado {
+  background-image: url('logo-unidad1.png');
+  background-position: left top 15px;
+  background-repeat: no-repeat;
+  background-size: 11%;
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-texto {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  text-align: left;
+  color: white;
+}
+
+.logo-texto .unidad {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-texto .condenados {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.encabezado-texto {
+  font-style: italic;
+  font-size: 36px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+.text-center {
+  color: white;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+}
+
+.list-group-item a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.list-group-item a:hover {
+  text-decoration: underline;
+}
+
+.encabezado {
+  padding: 10px;
+  color: white;
+}
+
+.encabezado .logo-texto .unidad, 
+.encabezado .logo-texto .condenados, 
+.encabezado .encabezado-texto {
+  color: white;
+}
+
+label {
+  color: white;
+}
+
+h1.text-center {
+  color: white;
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+}
+
+.table tbody td {
+  color: white;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a {
+  color: white; /* Cambia el color del texto de los enlaces a blanco */
+  cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+
+#resultados-internos ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#resultados-internos li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+#resultados-internos li:hover {
+  background-color: #f0f0f0;
+}
+/* estilos.css */
+
+/* Estilos específicos para el botón eliminar dentro de los elementos de la lista */
+.list-group-item .eliminar-btn {
+  float: right; /* Ajustar el botón a la derecha */
+  margin-left: 5px; /* Agregar un margen izquierdo para separar el botón del nombre del interno */
+}
+
+/* Ajuste de la anchura para evitar superposiciones */
+.list-group-item {
+  overflow: hidden; /* Evitar que el botón se superponga al nombre del interno */
+  padding-right: 50px; /* Ajustar el espacio a la derecha para evitar superposiciones */
+}
+
+@media print {
+  /* Asegurar que el fondo de la página sea blanco */
+  body {
+      background-color: white !important;
+      color: black !important;
+  }
+
+  /* Cambiar el fondo de todos los elementos dentro del body a blanco */
+  * {
+      background-color: white !important;
+      color: black !important;
+  }
+
+  /* Mostrar el encabezado */
+  .encabezado {
+      display: block !important;
+  }
+
+  /* Cambiar el color del texto del encabezado a negro */
+  .encabezado-texto, .logo-texto {
+      color: black !important;
+  }
+
+  /* Ajustar el color y tamaño del borde de las celdas */
+  .table th, .table td {
+      border: 1px solid black !important;
+  }
+
+  /* Cambiar el color del texto de los enlaces */
+  a {
+      color: black !important;
+      text-decoration: none;
+  }
+
+  /* Ocultar elementos que no se deben imprimir */
+  .no-print {
+      display: none !important;
+  }
+}
